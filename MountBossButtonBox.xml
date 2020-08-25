@@ -1,0 +1,192 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.blizzard.com/wow/ui/ ..\FrameXML\UI.xsd">
+	<GameTooltip name="MountBossTooltip_Mouseover" inherits="GameTooltipTemplate"/>
+	<Frame name="MountBoss_ButtonBox" id="1" inherits="BaseBasicFrameTemplate" parent="UIParent" toplevel="true" enableMouse="true" movable="true" frameStrata="LOW">
+		<Size>
+			<AbsDimension x="150" y="185"/>
+		</Size>
+		<Anchors>
+			<Anchor point="BOTTOMRIGHT" relativeTo="UIParent">
+				<Offset>
+					<AbsDimension x="-175" y="450" /> 
+				</Offset>
+			</Anchor>
+		</Anchors>
+
+		<Scripts>
+			<OnShow>
+				<!--MountBoss_BB_OnShow()-->
+			</OnShow>
+			<OnHide>
+				MountBoss_BB_OnClose()
+			</OnHide>
+			<OnLoad>
+				self:RegisterForDrag("LeftButton");
+				self:RegisterEvent("ADDON_LOADED");
+				<!--MountBoss_BB_OnLoad()-->
+			</OnLoad>
+			<OnDragStart>
+				if(button == "LeftButton") then
+				self:StartMoving();
+				end
+			</OnDragStart>
+			<OnDragStop>
+				self:StopMovingOrSizing();
+			</OnDragStop>
+			<!--<OnEvent event="UPDATE_MOUSEOVER_UNIT" function="MountBoss_OnMouseoverUnit" />-->
+			<OnEvent event="ADDON_LOADED" function="MountBoss_AddonLoad" />
+		</Scripts>
+
+
+		<Backdrop bgFile="Interface\DialogFrame\UI-DialogBox-Background"
+			 tile="true">
+			<TileSize>
+				<AbsValue val="32"/>
+			</TileSize>
+		</Backdrop>
+
+		<Layers>
+			<Layer level="OVERLAY">
+				<FontString
+					name="MountBoss_TitleLabel"
+					inherits="GameFontNormal">
+					<Size>
+						<AbsDimension x="130" y="30"/>
+					</Size>
+					<Anchors>
+						<Anchor point="TOP" relativeTo="MountBoss_ButtonBox">
+							<Offset>
+								<AbsDimension x="-15" y="5" />
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+			</Layer>
+		</Layers>
+
+		<Frames>
+			
+			<Button
+				name="MountBoss_ScoreButton"
+				parent="MountBoss_ButtonBox"
+				enableMouse="true"
+				inherits="UIPanelButtonTemplate">
+				<Size>
+					<AbsDimension x="120" y="30"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOP">
+						<Offset>
+							<AbsDimension x="0" y="-28" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						MountBoss_InterpretBBScorePush()
+					</OnClick>
+					<!--
+					<OnEnter>
+						MountBoss_BB_ScoreOnEnter(self)
+					</OnEnter>
+					<OnLeave>
+						MountBoss_BB_ScoreOnLeave(self)
+					</OnLeave>
+					-->
+				</Scripts>
+			</Button>
+
+			<Button
+				name="MountBoss_MyMountsButton"
+				parent="MountBoss_ButtonBox"
+				enableMouse="true"
+				inherits="UIPanelButtonTemplate">
+				<Size>
+					<AbsDimension x="120" y="30"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOP">
+						<Offset>
+							<AbsDimension x="0" y="-68" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						MountBoss_InterpretBBMyMountsPush()
+					</OnClick>
+					<!--
+					<OnEnter>
+						MountBoss_BB_MyMountsOnEnter(self)
+					</OnEnter>
+					<OnLeave>
+						MountBoss_BB_MyMountsOnLeave(self)
+					</OnLeave>
+					-->
+				</Scripts>
+			</Button>
+
+			<Button
+				name="MountBoss_TargetMountButton"
+				parent="MountBoss_ButtonBox"
+				enableMouse="true"
+				inherits="UIPanelButtonTemplate">
+				<Size>
+					<AbsDimension x="120" y="30"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOP">
+						<Offset>
+							<AbsDimension x="0" y="-108" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						MountBoss_InterpretBBTargetMountsPush()
+					</OnClick>
+					<!--
+					<OnEnter>
+						MountBoss_BB_TargetMountsOnEnter(self)
+					</OnEnter>
+					<OnLeave>
+						MountBoss_BB_TargetMountsOnLeave(self)
+					</OnLeave>
+					-->
+				</Scripts>
+			</Button>
+			
+			<Button
+				name="MountBoss_GroupMountButton"
+				parent="MountBoss_ButtonBox"
+				enableMouse="true"
+				inherits="UIPanelButtonTemplate">
+				<Size>
+					<AbsDimension x="120" y="30"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOP">
+						<Offset>
+							<AbsDimension x="0" y="-147" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						MountBoss_InterpretBBGroupMountsPush() 
+					</OnClick>
+					<!--
+					<OnEnter>
+						MountBoss_BB_GroupMountsOnEnter(self)
+					</OnEnter>
+					<OnLeave>
+						MountBoss_BB_GroupMountsOnLeave(self)
+					</OnLeave>
+					-->
+				</Scripts>
+			</Button>
+			
+		</Frames>
+	</Frame>
+</Ui>
