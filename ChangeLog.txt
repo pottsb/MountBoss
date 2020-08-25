@@ -1,0 +1,52 @@
+Credits
+Thanks Baukey for making the logo and input with development.
+Thanks Archifel for input with development.
+Thanks Bashcutter for the mount score idea, the prestige score list and input with development.
+Thanks WoW Addons; Discord for help debugging and answering A LOT of questions.
+Thanks Meorawr who wrote the foundation of the group mounts functions. 
+Thanks to all the pre-release testers who help find bugs.
+Thanks to ConineSpiritwolf author of https://www.curseforge.com/wow/addons/raider-io-total-rp-3-tooltips who let me use their code to display data in the TotalRP3 tooltip.
+
+Change log
+
+0.7-beta
+
+0.6-beta
+Added addon options which can be accessed under the interface game menu or with '/mb options'.
+Added a minimap icon which can be used to toggle the UI and update mount data. The minimap icon is disabled by default.
+Target mounts can now be output to /s but only when inside an instance.
+Target mounts and group mounts now show the mount score information of other addon users.
+Group mounts now gets tooltip data for addon users on other realms.
+The tooltip now shows total mounts as well as usable on one character.
+Mount data is now displayed in the TotalRP3 tooltip. Settings for this can be found within the TotalRP3 settings.
+Text in the debug output UI is now highlighted automatically and will reappear if accidentally deleted.
+Increased the reliability of the create macros function and fixed an issue that allowed you to create the macros more than once.
+Fixed an issue that resulted in blank data for a few second after login on fast computers.
+Fixed issues related to getting mount data for people with 0 mounts.
+Testing a Fix for an issue that would cause lua errors when getting target or group mounts while using certain addons.
+The addon has been prepared for translation should that ever be requested.
+
+0.5-beta
+The group mounts button as been added to the UI allowing you to compare mounts to everyone in your party, raid or battleground group. Group members must be in range but the addon will warn you if someone is to far away.
+Prestige score has been added. This is much like mountscore but only calculated using the rarest and hardest to obtain mounts in the game.
+You can now see the mount score, prestige and mounts usable on one character of other addon users on the same realm or connected realm in their tooltip.
+UI will stay hidden after relog or reload until you show it again with /mb toggle.
+Colour coded "more" and "fewer" when comparing mount numbers to make it easier to skim the list.
+Target mounts will now warn you when your target is too far away or phased.
+Mountboss now shows the version number when it's loaded and some helpful information shortly after login.
+'/mb show' and '/mb hide' added for convenience.
+
+0.4.1-beta
+Fixed a bug that broke slash commands.
+
+0.4-beta
+Fixed an issue where accounts with 0 mounts couldn't check targets mounts.
+Added change log file.
+Added total collected mounts and faction specific mount information to self mounts.
+Added macro to toggle the UI which can be created with "/mb macros"
+Added "/mb update" to force mount data to be updated.
+Added "/mb debug" to facilitate troubleshooting. If you have a problem please submit debug data to our Discord: https://discord.gg/GRSp8jb
+
+
+0.3-beta
+Initial release.
