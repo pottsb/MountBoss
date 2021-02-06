@@ -1,8 +1,8 @@
-## Interface: 80300
+## Interface: 90002
 ## Title: MountBoss
-## Notes: Version 0.6.1 Beta
+## Notes: Version 0.7 Beta
 ## Author: Bur-Frostmane
-## Version: 0.6.1 Beta
+## Version: 0.71 Beta
 ## DefaultState: enabled
 ## SavedVariables: MountBoss_BBHidden, MountBossMMISavedVarTable, MountBossDebug_Mode
 
@@ -13,6 +13,5 @@ locale\Locales.xml
 
 MountBossVars.lua
 MountBoss.lua
-MountBossAPI.lua
 MountBossTRP3.lua
 MountBossButtonBox.xml

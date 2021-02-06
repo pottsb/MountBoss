@@ -130,7 +130,7 @@ L["MMI_Title"] = "|cFFA600FAMount Boss|r"
 L["MMI_MountData"] = function(MountScore,PrestigeScore,MountsUOOC,TotalMountCount)
  return "MountScore:|cffffffff"..MountScore.."|r Prestige:|cffffffff"..PrestigeScore.."|r|nMounts UooC:|cffffffff"..MountsUOOC.."|r Mounts Total:|cffffffff"..TotalMountCount.."|r"
 end
-L["MMI_HelpInfo"] = "|cffaaaaaaRight click to toggle UI. Left click to drag.|nCTRL-click to update mount data. Shift-click to open options.|r"
+L["MMI_HelpInfo"] = "|cffaaaaaaLeft click to toggle UI. Hold Left click to drag.|nCTRL-click to update mount data. Shift-click to open options.|r"
 
 -- Login Information
 L["LoginInfo_Greeting"] = "Use '/mb' to list commands and '/mb help' for more information."

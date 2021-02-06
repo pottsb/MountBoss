@@ -1,6 +1,6 @@
 Credits
 Thanks Baukey for making the logo and input with development.
-Thanks Archifel for input with development.
+Thanks Archifel and Krowi for input with development.
 Thanks Bashcutter for the mount score idea, the prestige score list and input with development.
 Thanks WoW Addons; Discord for help debugging and answering A LOT of questions.
 Thanks Meorawr who wrote the foundation of the group mounts functions. 
@@ -10,6 +10,9 @@ Thanks to ConineSpiritwolf author of https://www.curseforge.com/wow/addons/raide
 Change log
 
 0.7-beta
+Removed target mounts and group mounts features due to blizzard API changes. (I'll add them back if it becomes possible again)
+Changed how mounts usable on one character is calculated due to blizzard API changes. 
+Added new mounts for Shadowlands 9.0.2
 
 0.6-beta
 Added addon options which can be accessed under the interface game menu or with '/mb options'.

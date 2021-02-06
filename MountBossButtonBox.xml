@@ -3,14 +3,10 @@
  xsi:schemaLocation="http://www.blizzard.com/wow/ui/ ..\FrameXML\UI.xsd">
 	<GameTooltip name="MountBossTooltip_Mouseover" inherits="GameTooltipTemplate"/>
 	<Frame name="MountBoss_ButtonBox" id="1" inherits="BaseBasicFrameTemplate" parent="UIParent" toplevel="true" enableMouse="true" movable="true" frameStrata="LOW">
-		<Size>
-			<AbsDimension x="150" y="185"/>
-		</Size>
+		<Size x="150" y="105"><AbsDimension /></Size>
 		<Anchors>
 			<Anchor point="BOTTOMRIGHT" relativeTo="UIParent">
-				<Offset>
-					<AbsDimension x="-175" y="450" /> 
-				</Offset>
+				<Offset><AbsDimension x="-175" y="450" /> </Offset>
 			</Anchor>
 		</Anchors>
 
@@ -37,16 +33,16 @@
 			<!--<OnEvent event="UPDATE_MOUSEOVER_UNIT" function="MountBoss_OnMouseoverUnit" />-->
 			<OnEvent event="ADDON_LOADED" function="MountBoss_AddonLoad" />
 		</Scripts>
-
-
-		<Backdrop bgFile="Interface\DialogFrame\UI-DialogBox-Background"
-			 tile="true">
-			<TileSize>
-				<AbsValue val="32"/>
-			</TileSize>
-		</Backdrop>
-
 		<Layers>
+		    <Layer level="BACKGROUND">
+                <Texture name="$parentBackground" file="Interface\DialogFrame\UI-DialogBox-Background">
+                    <Anchors>
+                        <Anchor point="TOPLEFT" x="3" y="-3"/>
+                        <Anchor point="BOTTOMRIGHT" x="-3" y="3"/>
+                    </Anchors>
+                    <TexCoords left="0" right="1" top="0" bottom="0.5"/>
+                </Texture>
+            </Layer>
 			<Layer level="OVERLAY">
 				<FontString
 					name="MountBoss_TitleLabel"
@@ -64,9 +60,7 @@
 				</FontString>
 			</Layer>
 		</Layers>
-
-		<Frames>
-			
+		<Frames>			
 			<Button
 				name="MountBoss_ScoreButton"
 				parent="MountBoss_ButtonBox"
@@ -96,7 +90,6 @@
 					-->
 				</Scripts>
 			</Button>
-
 			<Button
 				name="MountBoss_MyMountsButton"
 				parent="MountBoss_ButtonBox"
@@ -125,68 +118,7 @@
 					</OnLeave>
 					-->
 				</Scripts>
-			</Button>
-
-			<Button
-				name="MountBoss_TargetMountButton"
-				parent="MountBoss_ButtonBox"
-				enableMouse="true"
-				inherits="UIPanelButtonTemplate">
-				<Size>
-					<AbsDimension x="120" y="30"/>
-				</Size>
-				<Anchors>
-					<Anchor point="TOP">
-						<Offset>
-							<AbsDimension x="0" y="-108" />
-						</Offset>
-					</Anchor>
-				</Anchors>
-				<Scripts>
-					<OnClick>
-						MountBoss_InterpretBBTargetMountsPush()
-					</OnClick>
-					<!--
-					<OnEnter>
-						MountBoss_BB_TargetMountsOnEnter(self)
-					</OnEnter>
-					<OnLeave>
-						MountBoss_BB_TargetMountsOnLeave(self)
-					</OnLeave>
-					-->
-				</Scripts>
-			</Button>
-			
-			<Button
-				name="MountBoss_GroupMountButton"
-				parent="MountBoss_ButtonBox"
-				enableMouse="true"
-				inherits="UIPanelButtonTemplate">
-				<Size>
-					<AbsDimension x="120" y="30"/>
-				</Size>
-				<Anchors>
-					<Anchor point="TOP">
-						<Offset>
-							<AbsDimension x="0" y="-147" />
-						</Offset>
-					</Anchor>
-				</Anchors>
-				<Scripts>
-					<OnClick>
-						MountBoss_InterpretBBGroupMountsPush() 
-					</OnClick>
-					<!--
-					<OnEnter>
-						MountBoss_BB_GroupMountsOnEnter(self)
-					</OnEnter>
-					<OnLeave>
-						MountBoss_BB_GroupMountsOnLeave(self)
-					</OnLeave>
-					-->
-				</Scripts>
-			</Button>
-			
+			</Button>			
 		</Frames>
 	</Frame>
 </Ui>
