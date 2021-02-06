@@ -1,5 +1,5 @@
 local addonName, mb = ...
---whatever
+
 local frame = CreateFrame("FRAME", "MOUNTBOSSLISTENER_ACHIEVEMENTDATA")
 local frame = CreateFrame("FRAME", "MOUNTBOSSLISTENER_MOUSEOVERUNIT")
 MOUNTBOSSLISTENER_ACHIEVEMENTDATA:RegisterEvent("INSPECT_ACHIEVEMENT_READY")
