@@ -9,6 +9,11 @@ Thanks to ConineSpiritwolf author of https://www.curseforge.com/wow/addons/raide
 
 Change log
 
+0.71-beta
+Added some missing mounts.
+Background added to GUI.
+More old code removed.
+
 0.7-beta
 Removed target mounts and group mounts features due to blizzard API changes. (I'll add them back if it becomes possible again)
 Changed how mounts usable on one character is calculated due to blizzard API changes. 
